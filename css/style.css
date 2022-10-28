@@ -47,15 +47,6 @@ header > div {
   overflow: hidden;
   width: 1160px;
 }
-.ad-slider > div button {
-  width: 36px;
-  height: 36px;
-  position: absolute;
-  cursor: pointer;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
 .ad-slider div ul {
   white-space: nowrap;
   font-size: 0;
@@ -65,6 +56,15 @@ header > div {
 .ad-slider div ul li {
   display: inline-block;
   width: 1160px;
+}
+.ad-slider > div button {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 .ad-slider > div > .prev {
   background: url(../img/icn_main_prev.png) no-repeat;
@@ -85,25 +85,54 @@ header > div {
 }
 .famous {
   margin-top: 3.73vw;
+  position: relative;
 }
 .famous .people-list {
   position: relative;
   max-width: 986px;
   text-align: center;
   margin: 0 auto;
+  white-space: nowrap;
+  overflow: unset;
+  font-size: 0;
+}
+.famous .people-list > div {
+  overflow: hidden;
 }
 .famous .people-list .people {
   display: inline-block;
   font-size: 16px;
   font-weight: 400;
+  margin-right: 36px;
 }
 .famous .people-list .people img {
   width: 110px;
   height: 110px;
   border-radius: 50%;
+  margin-bottom: 14px;
 }
 .famous .people-list .people span {
-  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.famous button {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  top: 43px;
+  z-index: 1;
+}
+.famous .prev2 {
+  background: url(../img/icn_right_small.svg) no-repeat;
+  transform: rotate(180deg);
+  left: -61px;
+  background-size: contain;
+}
+.famous .next2 {
+  background: url(../img/icn_right_small.svg) no-repeat;
+  right: -61px;
+  background-size: contain;
 }
 @media screen and (min-width: 790px) {
   header > div > i {
