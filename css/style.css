@@ -88,22 +88,42 @@ header > div {
   position: relative;
 }
 .famous .people-list {
+  overflow: unset;
   position: relative;
   max-width: 986px;
   text-align: center;
   margin: 0 auto;
   white-space: nowrap;
-  overflow: unset;
   font-size: 0;
 }
-.famous .people-list > div {
+.famous .people-list .people-slide {
   overflow: hidden;
+}
+.famous .people-list .imgandname {
+  width: 10000px;
+  transform: translate(-4270px);
+  transition: transform 0.5s;
 }
 .famous .people-list .people {
   display: inline-block;
   font-size: 16px;
   font-weight: 400;
   margin-right: 36px;
+  width: 110px;
+  height: 145px;
+  cursor: pointer;
+}
+.famous .people-list .people div {
+  width: 110px;
+  height: 110px;
+}
+.famous .people-list .people:hover div {
+  opacity: 0.6;
+  transition: opacity 0.5s ease-in-out;
+}
+.famous .people-list .people img:hover {
+  transform: scale(1.05);
+  transition: transform 0.35s;
 }
 .famous .people-list .people img {
   width: 110px;
@@ -124,6 +144,7 @@ header > div {
   z-index: 1;
 }
 .famous .prev2 {
+  display: none;
   background: url(../img/icn_right_small.svg) no-repeat;
   transform: rotate(180deg);
   left: -61px;

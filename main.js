@@ -1,7 +1,11 @@
 const adsliderprev = document.querySelector('.prev');
 const adslidernext = document.querySelector('.next');
+const peopleprev = document.querySelector('.prev2');
+const peoplenext = document.querySelector('.next2');
 
 let translate = 0;
+let translatefa = -4270;
+
 const cnt = document.querySelector('.slider-list').childElementCount;
 
 adsliderprev.addEventListener('click', () => {
@@ -19,7 +23,6 @@ adslidernext.addEventListener('click', () => {
   }
   document.querySelector('.slider-list').style.transform = `translate(${translate-width}px)`;
   translate = translate - width;
-  console.log(translate)
 })
 
 // adsliderprev.addEventListener('click', () => {
@@ -36,3 +39,23 @@ adslidernext.addEventListener('click', () => {
 //   document.querySelector('.slider-list').style.transform = `translate(${translate-100}vw)`;
 //   translate = translate - 100;
 // })
+const cntfa = document.querySelector('.people').childElementCount;
+
+peopleprev.addEventListener('click', () => {
+  peoplenext.style.display = "block";
+  let width = 146;
+  if(translatefa === -4416) {
+    peopleprev.style.display = "none";
+  }
+  document.querySelector('.imgandname').style.transform = `translate(${width+translatefa}px)`;
+  translatefa = translatefa + width;
+})
+peoplenext.addEventListener('click', () => {
+  peopleprev.style.display = "block";
+  let width = 146;
+  if(translatefa === -4270-width*(cntfa-1)) {
+    peoplenext.style.display = "none";
+  }
+  document.querySelector('.imgandname').style.transform = `translate(${translatefa-width}px)`;
+  translatefa = translatefa - width;
+})
