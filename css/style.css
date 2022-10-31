@@ -116,6 +116,8 @@ header > div {
 .famous .people-list .people div {
   width: 110px;
   height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .famous .people-list .people:hover div {
   opacity: 0.6;
@@ -128,7 +130,6 @@ header > div {
 .famous .people-list .people img {
   width: 110px;
   height: 110px;
-  border-radius: 50%;
   margin-bottom: 14px;
 }
 .famous .people-list .people span {
@@ -154,6 +155,42 @@ header > div {
   background: url(../img/icn_right_small.svg) no-repeat;
   right: -61px;
   background-size: contain;
+}
+.ad-contents {
+  margin: 70px calc(50vw - 580px) 0;
+  width: 1160px;
+}
+.ad-contents .top-contents .top-content:nth-child(1) {
+  background: url('../img/banner3_bg@2x.png') no-repeat;
+  background-size: contain;
+  margin: 0 auto 24px;
+}
+.ad-contents .top-contents .top-content:nth-child(2) {
+  background: #5dad68;
+}
+.top-contents .top-content a {
+  display: flex;
+  align-items: center;
+  height: 160px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.top-contents .top-content:nth-child(1) a {
+  background: url('../img/banner3_img@2x.png') no-repeat;
+  background-size: contain;
+}
+.top-contents .top-content .ad-text {
+  color: #fff;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+.top-content .ad-text .text-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+.top-content .ad-text .text-content {
+  padding-top: 18px;
+  font-size: 16px;
 }
 @media screen and (min-width: 790px) {
   header > div > i {
