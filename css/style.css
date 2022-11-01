@@ -160,13 +160,29 @@ header > div {
   margin: 70px calc(50vw - 580px) 0;
   width: 1160px;
 }
+.ad-contents .top-contents .top-content {
+  margin: 0 auto 24px;
+}
 .ad-contents .top-contents .top-content:nth-child(1) {
   background: url('../img/banner3_bg@2x.png') no-repeat;
   background-size: contain;
-  margin: 0 auto 24px;
 }
 .ad-contents .top-contents .top-content:nth-child(2) {
   background: #5dad68;
+}
+.ad-contents .under-contents {
+  font-size: 0;
+}
+.ad-contents .under-contents .under-content {
+  background-color: #f7f7fa;
+  width: calc(50% - 5px);
+  display: inline-block;
+}
+.ad-contents .under-contents .under-content:first-child {
+  margin-right: 10px;
+}
+.under-contents .under-content .underad-text {
+  padding: 38px 50px;
 }
 .top-contents .top-content a {
   display: flex;
@@ -174,9 +190,16 @@ header > div {
   height: 160px;
   max-width: 800px;
   margin: 0 auto;
+  background-position: right center;
 }
 .top-contents .top-content:nth-child(1) a {
-  background: url('../img/banner3_img@2x.png') no-repeat;
+  background-image: url('../img/banner3_img@2x.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.top-contents .top-content:nth-child(2) a {
+  background-image: url('../img/img_main_banner.svg');
+  background-repeat: no-repeat;
   background-size: contain;
 }
 .top-contents .top-content .ad-text {
@@ -184,13 +207,34 @@ header > div {
   letter-spacing: -0.05em;
   line-height: 1;
 }
-.top-content .ad-text .text-title {
+.text-title {
   font-size: 28px;
   font-weight: 700;
 }
 .top-content .ad-text .text-content {
   padding-top: 18px;
   font-size: 16px;
+}
+.under-content .underad-text .text-content {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.under-contents .under-content a {
+  height: 160px;
+  margin: 0 auto;
+  background-position: right center;
+  position: relative;
+}
+.under-contents .under-content .under-img {
+  width: 255px;
+  height: 160px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.under-content .under-img img {
+  width: 100%;
 }
 @media screen and (min-width: 790px) {
   header > div > i {
