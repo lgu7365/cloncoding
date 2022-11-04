@@ -312,8 +312,61 @@ header > div {
   transition: transform 0.25s;
 }
 .ad-links {
-  margin: 80px calc(50vw - 580px) 0;
+  margin: 80px calc(50vw - 580px) 120px;
   width: 1160px;
+}
+.ad-links .link-list {
+  display: flex;
+  justify-content: space-between;
+}
+.ad-links .link-list .ad-link {
+  width: calc((100%-10px)/2);
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.ad-links .link-list .ad-link:first-child {
+  margin-right: 10px;
+}
+.link-list .ad-link img {
+  width: 100%;
+}
+footer {
+  background: #f7f7fa;
+}
+.footer-item {
+  width: 1160px;
+  margin: 0 calc(50vw - 580px);
+  padding: 38px 0;
+}
+footer .footer-item .footer-logo {
+  background: url('../img/img-logo-gray.png') no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 37px;
+}
+footer .footer-item .footer-under {
+  display: flex;
+  justify-content: space-between;
+  color: #babcc2;
+  letter-spacing: -0.6px;
+  margin-top: 13px;
+}
+.footer-under .priv .priv-lists .priv-list {
+  float: left;
+}
+.priv .priv-lists .priv-list a {
+  color: #babcc2;
+  font-size: 13px;
+  padding: 0 12px;
+  border-right: 1px solid #dadce0;
+}
+.priv .priv-lists .priv-list:first-child a {
+  padding-left: 0;
+}
+.priv .priv-lists .priv-list:last-child a {
+  padding-right: 0;
+  border-right: 0;
 }
 @media screen and (min-width: 790px) {
   header > div > i {
