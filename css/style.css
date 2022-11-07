@@ -164,7 +164,7 @@ header > div {
   margin: 0 auto 24px;
 }
 .ad-contents .top-contents .top-content:nth-child(1) {
-  background: url('../img/banner3_bg@2x.png') no-repeat;
+  background: url('../img/banner3_bg@2x.png');
   background-size: contain;
 }
 .ad-contents .top-contents .top-content:nth-child(2) {
@@ -254,6 +254,7 @@ header > div {
 .view-more {
   color: #babcc2;
   font-size: 16px;
+  line-height: 40px;
 }
 .magagines .magagine-list,
 .items-talks {
@@ -379,6 +380,17 @@ footer .footer-item .footer-under {
   }
 }
 
+@media screen and (max-width: 860px) {
+  .top-contents .top-content a {
+    padding: 0 20px;
+  }
+  .under-content .underad-text .text-title,
+  .under-content .underad-text .text-content {
+    position: relative;
+    left: -30px;
+  }
+}
+
 @media screen and (min-width: 790px) and (max-width: 1200px) {
   header {
     height: 9.5vw;
@@ -419,6 +431,49 @@ footer .footer-item .footer-under {
   }
   .ad-slider ul li img {
     width: 100%;
+  }
+  .ad-contents {
+    margin: 6vw auto 24px;
+    width: 100%;
+  }
+  .ad-contents .under-contents .under-content {
+    background-color: #f7f7fa;
+    width: calc(50% - 5px);
+    display: inline-block;
+  }
+  .top-contents .top-content a {
+    height: 145px;
+    max-width: 800px;
+  }
+  .text-title {
+    font-size: 22px;
+  }
+  .top-content .ad-text .text-content {
+    font-size: 14px;
+  }
+  .under-content .underad-text .text-content {
+    font-size: 1vw;
+  }
+  .under-contents .under-content a {
+    height: 145px;
+  }
+  .under-contents .under-content .under-img {
+    width: 255px;
+    height: 160px;
+  }
+  .magagines .magagine-header,
+  .new-items-talk .new-items-header {
+    position: relative;
+  }
+  .magagines .magagine-header h2,
+  .new-items-talk .new-items-header h2 {
+    font-size: 22px;
+  }
+  .view-more {
+    font-size: 1.38vw;
+    position: absolute;
+    right: 20px;
+    line-height: 32px;
   }
 }
 
