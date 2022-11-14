@@ -598,6 +598,7 @@ footer .footer-item .footer-under {
     position: relative;
     left: 0px;
   }
+
   .magagines,
   .new-items-talk {
     margin: 0;
@@ -605,23 +606,31 @@ footer .footer-item .footer-under {
     width: 100%;
     box-sizing: border-box;
   }
+
   .magagine-header,
   .new-items-header {
     padding: 6.9vw 0 2vw;
   }
-  .magagine-header h2,
-  .new-items-header h2 {
-    font-size: 22px;
-  }
+
   .view-more {
     font-size: 12px;
   }
+  .list-section {
+    width: calc(100vw - 55px);
+    overflow: hidden;
+  }
   .magagines .magagine-list,
-  .items-talks {
-    display: inline-block;
+  .new-items-talk .items-talks {
+    display: block;
+    font-size: 0;
+    white-space: nowrap;
+    width: 5000px;
   }
   .magagines .magagine-list .magagine,
   .items-talks .item-talk  {
+    display: inline-block;
+    height: calc(50vw);
+    width: calc(100vw - 55px);
     position: relative;
     cursor: pointer;
   }
