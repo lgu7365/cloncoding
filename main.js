@@ -2,6 +2,12 @@ const adsliderprev = document.querySelector('.prev');
 const adslidernext = document.querySelector('.next');
 const peopleprev = document.querySelector('.prev2');
 const peoplenext = document.querySelector('.next2');
+const mdot1 = document.querySelector('.m-dot1');
+const mdot2 = document.querySelector('.m-dot2');
+const mdot3 = document.querySelector('.m-dot3');
+const idot1 = document.querySelector('.i-dot1');
+const idot2 = document.querySelector('.i-dot2');
+const idot3 = document.querySelector('.i-dot3')
 
 let translate = 0;
 let translatefa = -4270;
@@ -59,3 +65,43 @@ peoplenext.addEventListener('click', () => {
   document.querySelector('.imgandname').style.transform = `translate(${translatefa-width}px)`;
   translatefa = translatefa - width;
 })
+
+function clickmdot(e) {
+  mdot2.style.backgroundColor = '#bbb';
+  mdot3.style.backgroundColor = '#bbb';
+  mdot1.style.backgroundColor = '#bbb';
+  e.target.style.backgroundColor = '#717171';
+
+  if(e.target.classList.value === 'm-dot1'){
+    document.querySelector('.magagine-list').style.transform = `translateX(0%)`;
+  }
+  else if(e.target.classList.value === 'm-dot2'){
+    document.querySelector('.magagine-list').style.transform = `translateX(-10%)`;
+  }
+  else if(e.target.classList.value === 'm-dot3'){
+    document.querySelector('.magagine-list').style.transform = `translateX(-20%)`;
+  }
+}
+function clickidot(e) {
+  idot2.style.backgroundColor = '#bbb';
+  idot3.style.backgroundColor = '#bbb';
+  idot1.style.backgroundColor = '#bbb';
+  e.target.style.backgroundColor = '#717171';
+
+  if(e.target.classList.value === 'i-dot1'){
+    document.querySelector('.items-talks').style.transform = `translateX(0%)`;
+  }
+  else if(e.target.classList.value === 'i-dot2'){
+    document.querySelector('.items-talks').style.transform = `translateX(-10%)`;
+  }
+  else if(e.target.classList.value === 'i-dot3'){
+    document.querySelector('.items-talks').style.transform = `translateX(-20%)`;
+  }
+}
+
+mdot1.addEventListener('click', clickmdot);
+mdot2.addEventListener('click', clickmdot);
+mdot3.addEventListener('click', clickmdot);
+idot1.addEventListener('click', clickidot);
+idot2.addEventListener('click', clickidot);
+idot3.addEventListener('click', clickidot);
