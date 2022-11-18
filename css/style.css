@@ -40,7 +40,7 @@ header > div {
 .ad-slider {
   height: 488px;
 }
-.ad-slider > div {
+.ad-slider .ad-slider-contents {
   margin: 0 calc(50vw - 580px);
   position: relative;
   height: 100%;
@@ -57,7 +57,7 @@ header > div {
   display: inline-block;
   width: 1160px;
 }
-.ad-slider > div button {
+.ad-slider .ad-slider-contents button {
   width: 36px;
   height: 36px;
   position: absolute;
@@ -66,12 +66,12 @@ header > div {
   transform: translateY(-50%);
   z-index: 1;
 }
-.ad-slider > div > .prev {
+.ad-slider .ad-slider-contents .prev {
   background: url(../img/icn_main_prev.png) no-repeat;
   left: 0px;
   background-size: contain;
 }
-.ad-slider > div > .next {
+.ad-slider .ad-slider-contents .next {
   background: url(../img/icn_main_next.png) no-repeat;
   right: 0px;
   background-size: contain;
@@ -82,6 +82,9 @@ header > div {
 .ad-slider ul li img:hover {
   transform: scale(1.05);
   transition: transform 0.35s;
+}
+.ad-slider .ad-slider-contents .mobile-slider {
+  display: none;
 }
 .famous {
   margin-top: 3.73vw;
@@ -432,8 +435,8 @@ footer .footer-item .footer-under {
   .ad-slider {
     height: 42vw;
   }
-  .ad-slider > div {
-    width: 100vw;
+  .ad-slider .ad-slider-contents {
+    width: 100%;
     margin: 0;
   }
   .ad-slider div ul {
@@ -493,10 +496,6 @@ footer .footer-item .footer-under {
     color: #babcc2;
     font-size: 1.4vw;
     line-height: 3vw;
-  }
-  .magagines .magagine-list,
-  .new-items-talk .items-talks {
-    transform: translateX(0);
   }
   .magagines .magagine-list .magagine,
   .items-talks .item-talk  {
@@ -563,6 +562,12 @@ footer .footer-item .footer-under {
   .menu-box {
     font-size: 5vw;
     right: 5vw;
+  }
+  .ad-slider .slider-list {
+    display: none;
+  }
+  .ad-slider .mobile-slider {
+    display: block;
   }
   .ad-contents {
     margin: 70px 0 0;
@@ -737,5 +742,14 @@ footer .footer-item .footer-under {
   }
   .priv {
     margin-bottom: 10px;
+  }
+  .first-screen {
+    transform: translateX(0%);
+  }
+  .second-screen {
+    transform: translateX(-10%);
+  }
+  .third-screen {
+    transform: translateX(-20%);
   }
 }
