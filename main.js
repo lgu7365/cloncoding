@@ -16,7 +16,7 @@ const idot3 = document.querySelector('.i-dot3');
 
 
 let translate = 0;
-let translatefa = -4270;
+let translatefa = 0;
 
 adsliderprev.addEventListener('click', () => {
   if(translate === 0) {
@@ -33,40 +33,22 @@ adslidernext.addEventListener('click', () => {
   translate = translate - 20;
 })
 
-// adsliderprev.addEventListener('click', () => {
-//   if(translate === 0) {
-//     translate = -100*cnt;
-//   }
-//   document.querySelector('.slider-list').style.transform = `translate(${100+translate}vw)`;
-//   translate = translate + 100;
-// })
-// adslidernext.addEventListener('click', () => {
-//   if(translate === -100*cnt) {
-//     translate = 100;
-//   }
-//   document.querySelector('.slider-list').style.transform = `translate(${translate-100}vw)`;
-//   translate = translate - 100;
-// })
-// const cntfa = document.querySelector('.people').childElementCount;
-
-// peopleprev.addEventListener('click', () => {
-//   peoplenext.style.display = "block";
-//   let width = 146;
-//   if(translatefa === -4416) {
-//     peopleprev.style.display = "none";
-//   }
-//   document.querySelector('.imgandname').style.transform = `translate(${width+translatefa}px)`;
-//   translatefa = translatefa + width;
-// })
-// peoplenext.addEventListener('click', () => {
-//   peopleprev.style.display = "block";
-//   let width = 146;
-//   if(translatefa === -4270-width*(cntfa-1)) {
-//     peoplenext.style.display = "none";
-//   }
-//   document.querySelector('.imgandname').style.transform = `translate(${translatefa-width}px)`;
-//   translatefa = translatefa - width;
-// })
+peopleprev.addEventListener('click', () => {
+  peoplenext.style.display = "block";
+  if(translatefa === -10) {
+    peopleprev.style.display = "none";
+  }
+  document.querySelector('.imgandname').style.transform = `translate(${translatefa+10}%)`;
+  translatefa = translatefa + 10;
+})
+peoplenext.addEventListener('click', () => {
+  peopleprev.style.display = "block";
+  if(translatefa === -20) {
+    peoplenext.style.display = "none";
+  }
+  document.querySelector('.imgandname').style.transform = `translate(${translatefa-10}%)`;
+  translatefa = translatefa - 10;
+})
 
 function clickmsdot(e) {
   msdot1.style.backgroundColor = '#bbb';

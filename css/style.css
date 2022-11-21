@@ -96,12 +96,14 @@ header > div {
   white-space: nowrap;
   font-size: 0;
 }
+.famous .people-list-m {
+  display: none;
+}
 .famous .people-list .people-slide {
   overflow: hidden;
 }
 .famous .people-list .imgandname {
-  width: 10000px;
-  transform: translate(-4270px);
+  width: 1460px;
   transition: transform 0.5s;
 }
 .famous .people-list .people {
@@ -118,6 +120,7 @@ header > div {
   height: 110px;
   border-radius: 50%;
   overflow: hidden;
+  margin-bottom: 14px;
 }
 .famous .people-list .people:hover div {
   opacity: 0.6;
@@ -128,9 +131,8 @@ header > div {
   transition: transform 0.35s;
 }
 .famous .people-list .people img {
-  width: 110px;
-  height: 110px;
-  margin-bottom: 14px;
+  width: 100%;
+  height: 100%;
 }
 .famous .people-list .people span {
   font-size: 16px;
@@ -448,6 +450,35 @@ footer .footer-item .footer-under {
   .ad-slider ul li img {
     width: 100%;
   }
+  .famous .people-list {
+    max-width: 85vw;
+  }
+  .famous .people-list .imgandname {
+    width: 122.42vw;
+    transition: transform 0.5s;
+  }
+  .famous .people-list .people {
+    margin-right: 2.759vw;
+    width: 9.483vw;
+    height: 13.5vw;
+  }
+  .famous .people-list .people div {
+    width: 9.483vw;
+    height: 9.483vw;
+    margin-bottom: 1.38vw;
+  }
+  .famous .people-list .people span {
+    font-size: 1.38vw;
+  }
+  .famous button {
+    top: 3vw;
+  }
+  .famous .prev2 {
+    left: -4.5vw;
+  }
+  .famous .next2 {
+    right: -3.5vw;
+  }
   .ad-contents {
     margin: 6vw auto 24px;
     width: 100%;
@@ -587,6 +618,59 @@ footer .footer-item .footer-under {
   .ad-slider .mobile-slider li {
     height: 100%;
     width: calc(100vw - 57px);
+  }
+
+  .famous {
+    margin-top: 6.73vw;
+  }
+  .famous .people-list{
+    display: none;
+  }
+  .famous .people-list-m {
+    display: block;
+    overflow: unset;
+    position: relative;
+    max-width: 986px;
+    text-align: center;
+    margin: 0 auto;
+    white-space: nowrap;
+    font-size: 0;
+  }
+  .famous .people-list-m .people-slide-m {
+    overflow: auto;
+  }
+  .famous .people-list-m .imgandname-m {
+    width: 155vw;
+  }
+  .famous .people-list-m .people {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 2vw;
+    width: 13vw;
+    height: auto;
+    margin-bottom: 2vw;
+  }
+  .famous .people-list-m .people div {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 13vw;
+    height: 13vw;
+    margin-bottom: 1.6vw;
+  }
+  .famous .people-list-m .people:hover div {
+    opacity: 0.6;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .famous .people-list-m .people img {
+    width: 100%;
+    height: 100%;
+  }
+  .famous .people-list-m .people img:hover {
+    transform: scale(1.05);
+    transition: transform 0.35s;
+  }
+  .famous .people-list-m .people span {
+    font-size: 2.667vw;
   }
 
   .ad-contents {
